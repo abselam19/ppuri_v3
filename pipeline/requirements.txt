@@ -1,0 +1,2 @@
+# Optional: orders the study path by word frequency
+wordfreq>=3.1

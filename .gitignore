@@ -1,0 +1,17 @@
+# secrets and personal data: never commit these
+config.json
+config.json.tmp
+progress/
+
+# build output and caches
+app/node_modules/
+app/dist/
+pipeline/sources/
+pipeline/build.log
+__pycache__/
+*.pyc
+.DS_Store
+
+# app/public/data/ppuri-data.json IS committed: GitHub Pages builds from it
+*.tmp
+*.part
