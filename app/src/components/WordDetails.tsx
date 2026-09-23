@@ -186,6 +186,7 @@ export function WordLink({ word, status }: { word: WordRec; status?: ReturnType<
   );
 }
 
+<<<<<<< HEAD
 /** Other words on the list with the same spelling, e.g. 시장 (market) and 시장 (mayor). */
 export function SpelledAlike({ word, data }: { word: WordRec; data: AppData }) {
   const others = (data.homographs.get(word.w) ?? [])
@@ -208,6 +209,8 @@ export function SpelledAlike({ word, data }: { word: WordRec; data: AppData }) {
   );
 }
 
+=======
+>>>>>>> 611ea1801de19e22502a4f1426336ebcc88f000e
 export function Relations({ word, data }: { word: WordRec; data: AppData }) {
   if (!word.y?.length) return null;
   const label: Record<string, string> = { 유의어: 'Similar', 반대말: 'Opposite' };
@@ -243,7 +246,10 @@ export function WordDetails({ word, data, conjFull = false }: { word: WordRec; d
           {word.k}
         </p>
       )}
+<<<<<<< HEAD
       <SpelledAlike word={word} data={data} />
+=======
+>>>>>>> 611ea1801de19e22502a4f1426336ebcc88f000e
       <Breakdown word={word} data={data} />
       <WordMap data={data} word={word} />
       <Examples word={word} />

@@ -2,7 +2,10 @@ import { useEffect, useState, type ReactNode } from 'react';
 import type { AppData, RootRec, WordRec } from '../lib/data';
 import { rootGloss } from '../lib/data';
 import type { Status } from '../lib/srs';
+<<<<<<< HEAD
 import { anchorWord, sameSound } from '../lib/data';
+=======
+>>>>>>> 611ea1801de19e22502a4f1426336ebcc88f000e
 import { isSyllable } from '../lib/hangul';
 import { store, useProgress } from '../lib/store';
 import { speak, ttsSupported } from '../lib/tts';
@@ -108,6 +111,7 @@ export function RootGlyph({ root, size = 'lg', caption = true }: { root: RootRec
   );
 }
 
+<<<<<<< HEAD
 /**
  * Roots that sound the same. Without hanja on screen, 대 (big) and 대 (era) look identical,
  * so each root page and root card names the others by a word you can recognise.
@@ -156,6 +160,8 @@ export function SameSound({ data, root, limit = 6 }: { data: AppData; root: Root
   );
 }
 
+=======
+>>>>>>> 611ea1801de19e22502a4f1426336ebcc88f000e
 export function RootChip({ root, status }: { root: RootRec; status?: Status }) {
   return (
     <A to={`root/${root.c}`} className={`root-chip status-${status ?? 'new'}`}>

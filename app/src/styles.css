@@ -1692,6 +1692,7 @@ a.breakdown-root:hover {
 }
 
 /* ------------------------------------------------------------ root and word maps */
+<<<<<<< HEAD
 .root-anchor {
   font-family: var(--sans);
   font-size: 0.875rem;
@@ -1808,6 +1809,8 @@ a.breakdown-root:hover {
   margin-left: 6px;
 }
 
+=======
+>>>>>>> 611ea1801de19e22502a4f1426336ebcc88f000e
 .map-figure {
   margin: 22px 0 8px;
 }

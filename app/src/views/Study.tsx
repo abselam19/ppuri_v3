@@ -1,9 +1,15 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { RootMap, WordMap } from '../components/Maps';
 import { ConjTable, Examples, Family, Relations, Senses } from '../components/WordDetails';
+<<<<<<< HEAD
 import { A, Cells, RootGlyph, SameSound, SpeakButton, go } from '../components/ui';
 import { checkAnswer, drillFor, verbFor } from '../lib/conjugate';
 import { anchorWords, rootGloss, type AppData, type WordRec } from '../lib/data';
+=======
+import { A, Cells, RootGlyph, SpeakButton, go } from '../components/ui';
+import { checkAnswer, drillFor, verbFor } from '../lib/conjugate';
+import { rootGloss, type AppData, type WordRec } from '../lib/data';
+>>>>>>> 611ea1801de19e22502a4f1426336ebcc88f000e
 import { hash, interval, levelLabel, posLabel } from '../lib/format';
 import { orderSession, planToday, wordDecodable } from '../lib/session';
 import {
@@ -309,12 +315,16 @@ function Ratings({ row, suggested, onRate, disabled }: { row: CardRow; suggested
 
 function RootCardView({ data, id, revealed }: { data: AppData; id: string; revealed: boolean }) {
   const root = data.roots.get(parseCard(id).ref)!;
+<<<<<<< HEAD
   // several roots share one reading (ten are read 시), so the card names this one by its words
   const anchors = anchorWords(data, root, 2);
+=======
+>>>>>>> 611ea1801de19e22502a4f1426336ebcc88f000e
   return (
     <div className="card card-root">
       <p className="prompt">What does this root mean?</p>
       <RootGlyph root={root} />
+<<<<<<< HEAD
       {anchors.length > 0 && (
         <p className="root-anchor">
           as in{' '}
@@ -326,6 +336,8 @@ function RootCardView({ data, id, revealed }: { data: AppData; id: string; revea
           ))}
         </p>
       )}
+=======
+>>>>>>> 611ea1801de19e22502a4f1426336ebcc88f000e
       {revealed && (
         <div className="reveal-panel">
           <p className="root-meaning">
@@ -334,7 +346,10 @@ function RootCardView({ data, id, revealed }: { data: AppData; id: string; revea
             </span>
             <span className="root-en">{rootGloss(root)}</span>
           </p>
+<<<<<<< HEAD
           <SameSound data={data} root={root} limit={3} />
+=======
+>>>>>>> 611ea1801de19e22502a4f1426336ebcc88f000e
           <p className="minor">Words from this root and their co-parent roots</p>
           <RootMap key={root.c} data={data} char={root.c} limit={8} compact caption={false} />
           <A to={`root/${root.c}`} className="text-button">

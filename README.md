@@ -41,7 +41,11 @@ In stage 2, about 1,200 중급 words need no new roots at all; they arrive as "r
 
 | Card | Front | Notes |
 |---|---|---|
+<<<<<<< HEAD
 | Root | the root's Hangul reading in a practice square, with its romanization and two words it builds | back shows the Korean meaning (훈), an English gloss, the roots that sound the same, and a map of its words and co-parent roots |
+=======
+| Root | the root's Hangul reading in a practice square, with its romanization | back shows the Korean meaning (훈), an English gloss and a map of its words and co-parent roots |
+>>>>>>> 611ea1801de19e22502a4f1426336ebcc88f000e
 | Word | the word in manuscript cells, romanization above each syllable | when you know all its roots, their meanings appear under the cells as a hint: decode the word |
 | Conjugation | a verb or adjective and a target form | type the form in Korean; the answer is checked for you |
 | English → Korean | English meaning and syllable count | off by default (Settings) |
@@ -71,8 +75,11 @@ Conjugation and English→Korean cards start only after the word itself has pass
 
 A ×n badge marks a co-parent that joins n of the shown words. Learning those pairs together unlocks several words at once: 학 and 생 together give 학생, 대학생, 유학생 and more. Point at a word or a co-parent to trace its lines, and click a co-parent to open its own map. Word pages and word cards show the word between its co-parent roots, surrounded by other words each root builds. Maps show Hangul, romanization and English.
 
+<<<<<<< HEAD
 **Same-sounding roots.** Most roots share their reading with another root: 779 of the 903, and 262 of the first 300 on the path. So root pages and root cards list the other roots with the same reading, each named by one of your own words: 대 as in 대화 (face, oppose), 대 as in 대표 (replace; era), 대 as in 침대 (stand, platform). Words spelled alike but built from different roots, such as 시장 (market) and 시장 (mayor), link to each other on their word pages. This is the main pitfall of learning Sino-Korean roots without hanja on screen. For the same reason, a root card names its root on the front by two of its words (시 as in 역시, 혹시): ten roots are read 시, so the reading alone would not say which one the card asks about.
 
+=======
+>>>>>>> 611ea1801de19e22502a4f1426336ebcc88f000e
 **Scheduling.** Reviews are scheduled with FSRS (the algorithm Anki also offers), aiming at 90% recall by default. The study day rolls over at 4 a.m.
 
 **Placement check.** Use the placement check first if you already know some Korean. Words you mark as known skip the learning steps and come back for a check two to eight weeks later.
@@ -220,7 +227,11 @@ The parser was written against the 2019 files (LMF XML, DTD revision 16). If the
 
 Two tables in `build_data.py` are hand-written and worth checking:
 
+<<<<<<< HEAD
 - `GLOSS_OVERRIDES`: English meanings for 106 roots, written by hand. The Unicode source describes Chinese usage, which is often wrong for Korean words: it glosses 以 as "by means of" where your words (이상, 이후, 이전) use it as a reference point, and 空 as "empty" where 공항 and 항공 use it as "sky, air". The roots on the first stretch of the path have been reviewed; later ones have not.
+=======
+- `GLOSS_OVERRIDES`: English meanings for about 60 frequent roots. The Unicode source describes Chinese usage (人 "man", 韓 "fence").
+>>>>>>> 611ea1801de19e22502a4f1426336ebcc88f000e
 - `BLOCK`: pairs the derivation rules would otherwise link wrongly (기르다/기름, 안다/안개).
 
 ## Changing the app (optional)
@@ -267,7 +278,11 @@ pipeline/romanize.py      the Python twin of roman.ts
 - **Vocabulary, definitions, pronunciations, examples and conjugation samples:** 국립국어원 한국어기초사전, licensed CC BY-SA 2.0 KR.
   - The generated word list (`ppuri-data.json`) is derived from it and falls under the same license. The notice is in `app/public/data/LICENSE.md` and is published together with the app. If you share the list, credit NIKL and share it under the same terms.
 - **Hanja readings and Korean meanings:** libhangul `hanja.txt` (BSD-3-Clause).
+<<<<<<< HEAD
 - **English hanja definitions:** Unicode Unihan database (Unicode License v3). It describes Chinese usage, so root pages label it "In Chinese dictionaries" and show a hand-checked Korean meaning first.
+=======
+- **English hanja definitions:** Unicode Unihan database (Unicode License v3).
+>>>>>>> 611ea1801de19e22502a4f1426336ebcc88f000e
 - **Word frequencies, used only to order the path:** wordfreq data (CC BY-SA 4.0).
 - **Libraries and font:** ts-fsrs (MIT), React (MIT), idb (ISC), Literata font (SIL Open Font License 1.1).
 - **Audio:** the dictionary's pronunciation recordings are not used. The mirror's maintainers were told they may not be redistributed, so the app relies on your system's Korean voice.

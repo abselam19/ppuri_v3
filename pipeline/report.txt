@@ -1,10 +1,17 @@
 dictionary entries: 54828 (snapshot 2019/08/02 04:03:06)
 frequency list: wordfreq 29988 tokens
 target entries after merging POS duplicates: 5698 (초급 1844, 중급 3854)
+<<<<<<< HEAD
 hanja in target words: 1353; roots (in 2+ words): 903; Sino-Korean study items: 2973; native-track items: 2725
 native derivation links: 139 from dictionary, 104 from rules
 nouns with 하다/되다 bridge verbs: 856
 stage 1: 776 Sino items, 573 new roots, 0 words decodable from earlier roots, 1068 native items
+=======
+hanja in target words: 1354; roots (in 2+ words): 903; Sino-Korean study items: 2974; native-track items: 2724
+native derivation links: 139 from dictionary, 104 from rules
+nouns with 하다/되다 bridge verbs: 856
+stage 1: 777 Sino items, 573 new roots, 0 words decodable from earlier roots, 1067 native items
+>>>>>>> 611ea1801de19e22502a4f1426336ebcc88f000e
 stage 2: 2197 Sino items, 330 new roots, 1210 words decodable from earlier roots, 1657 native items
 path units: 1810; items: 5698; roots introduced: 903
 pronunciations: 5364 from the dictionary, 334 derived by rule

@@ -75,6 +75,7 @@ export interface AppData {
   rootOrder: Map<string, number>;
   unitOf: Map<number, number>; // word id -> path unit index
   homographs: Map<string, number[]>;
+<<<<<<< HEAD
   rootsByReading: Map<string, RootRec[]>; // 이 -> 以, 二, 移 ... (the pitfall of learning roots without hanja)
   search: { id: number; ko: string; en: string; hanja: string; rr: string }[];
 }
@@ -117,6 +118,11 @@ export function anchorWords(data: AppData, root: RootRec, count = 1, reading?: s
 export const anchorWord = (data: AppData, root: RootRec, reading?: string): WordRec | undefined =>
   anchorWords(data, root, 1, reading)[0];
 
+=======
+  search: { id: number; ko: string; en: string; hanja: string; rr: string }[];
+}
+
+>>>>>>> 611ea1801de19e22502a4f1426336ebcc88f000e
 export const VA_POS = ['동사', '형용사'];
 
 export const isVerbLike = (w: WordRec) => w.p.some((p) => VA_POS.includes(p)) && w.w.endsWith('다');
@@ -131,7 +137,10 @@ export async function loadData(): Promise<AppData> {
   const rootOrder = new Map(bundle.roots.map((r, i) => [r.c, i]));
   const unitOf = new Map<number, number>();
   bundle.path.forEach((u, i) => u.w.forEach((id) => unitOf.set(id, i)));
+<<<<<<< HEAD
   const rootsByReading = indexRootsByReading(bundle.roots);
+=======
+>>>>>>> 611ea1801de19e22502a4f1426336ebcc88f000e
   const homographs = new Map<string, number[]>();
   for (const w of bundle.words) homographs.set(w.w, [...(homographs.get(w.w) ?? []), w.i]);
   const search = bundle.words.map((w) => ({
@@ -141,7 +150,11 @@ export async function loadData(): Promise<AppData> {
     hanja: w.o ?? '',
     rr: (w.rr ?? []).join(''),
   }));
+<<<<<<< HEAD
   return { bundle, words, roots, singles, rootOrder, unitOf, homographs, rootsByReading, search };
+=======
+  return { bundle, words, roots, singles, rootOrder, unitOf, homographs, search };
+>>>>>>> 611ea1801de19e22502a4f1426336ebcc88f000e
 }
 
 const HANJA = /[\u3400-\u4dbf\u4e00-\u9fff\uf900-\ufaff]/;

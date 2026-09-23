@@ -1,6 +1,10 @@
 import { useMemo, useState } from 'react';
 import { RootMap } from '../components/Maps';
+<<<<<<< HEAD
 import { A, Cells, Empty, RootGlyph, SameSound, StatusMark, StatusText } from '../components/ui';
+=======
+import { A, Cells, Empty, RootGlyph, StatusMark, StatusText } from '../components/ui';
+>>>>>>> 611ea1801de19e22502a4f1426336ebcc88f000e
 import { rootGloss, searchRoots, type AppData } from '../lib/data';
 import { levelLabel, nf } from '../lib/format';
 import { newRow, rootCard, statusOf, wordCard, type Status } from '../lib/srs';
@@ -112,7 +116,11 @@ export function RootPage({ data, char }: { data: AppData; char: string }) {
             {root.hun.join(', ') || root.rd[0]}
           </p>
           <p className="root-en">{rootGloss(root)}</p>
+<<<<<<< HEAD
           {root.en && root.en !== rootGloss(root) && <p className="root-def">In Chinese dictionaries: {root.en}</p>}
+=======
+          {root.en && root.en !== rootGloss(root) && <p className="root-def">Full dictionary sense: {root.en}</p>}
+>>>>>>> 611ea1801de19e22502a4f1426336ebcc88f000e
           <p className="meta-line">
             <StatusText status={statusOf(row)} />
             <span>
@@ -132,8 +140,11 @@ export function RootPage({ data, char }: { data: AppData; char: string }) {
         </div>
       </header>
 
+<<<<<<< HEAD
       <SameSound data={data} root={root} />
 
+=======
+>>>>>>> 611ea1801de19e22502a4f1426336ebcc88f000e
       <section>
         <div className="section-head">
           <h2 className="section-title">{nf.format(words.length)} words on your list</h2>

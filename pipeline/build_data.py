@@ -241,10 +241,13 @@ def _gloss_tokens(text):
 
 # Hand-written English glosses for frequent roots whose first Unihan senses mislead in Korean
 # (Unihan describes Chinese usage: 人 "man", 韓 "fence", 曜 "glorious").
+<<<<<<< HEAD
 # origins the dictionary records that are not Sino-Korean word formation:
 # 얼음 is native (얼다 + -음); 乻音 is only an old phonetic spelling of it
 BOGUS_ORIGIN = {("얼음", "乻音")}
 
+=======
+>>>>>>> 611ea1801de19e22502a4f1426336ebcc88f000e
 GLOSS_OVERRIDES = {
     "的": "-ic, -al (makes descriptive words)", "人": "person, people", "學": "learning, study",
     "者": "person who (suffix)", "場": "place, venue", "事": "matter, affair", "行": "go, act; travel",
@@ -265,6 +268,7 @@ GLOSS_OVERRIDES = {
     "士": "scholar, specialist", "係": "relation, in charge", "質": "quality, substance",
     "乘": "ride", "勤": "work, diligent", "直": "straight, direct", "大": "big, great",
     "留": "stay, remain", "褐": "brown",
+<<<<<<< HEAD
     # reviewed by hand against the words on the path: the automatic sense misleads for Korean usage
     "以": "from a point: above, below, before, after", "空": "empty; sky, air", "親": "close, intimate; relative",
     "故": "old, former; cause, incident", "張": "stretch; sheet (counter)", "夫": "husband; man, worker",
@@ -277,6 +281,8 @@ GLOSS_OVERRIDES = {
     "消": "vanish; consume, digest", "絡": "connect, contact", "湯": "hot water; soup",
     "配": "distribute, deliver; pair", "甁": "bottle", "待": "wait; treat a guest", "帶": "carry; belt, zone",
     "代": "replace; era",
+=======
+>>>>>>> 611ea1801de19e22502a4f1426336ebcc88f000e
 }
 
 
@@ -368,9 +374,12 @@ def main():
 
     # ---- target selection, merging same-spelling Sino entries that differ only in POS
     target = [e for e in entries if e["level"] in TARGET_LEVELS and e["unit"] == "단어"]
+<<<<<<< HEAD
     for e in target:
         if (e["word"], (e["origin"] or "").split("/")[0].replace(" ", "")) in BOGUS_ORIGIN:
             e["origin"] = None
+=======
+>>>>>>> 611ea1801de19e22502a4f1426336ebcc88f000e
     def lemma_tokens(e):
         en = english(e, 1)
         return set(re.findall(r"[a-z]+", en[0][0].lower())) - {"a", "an", "the", "to", "be", "of"} if en else set()
